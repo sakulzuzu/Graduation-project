@@ -63,15 +63,3 @@ npm run dev
 
 - `docs/EXPERIMENT_RESULTS.md`
 - `docs/experiment_results/formal_training_20260507/`
-
-## GitHub 备份建议
-
-上传前可先阅读：
-
-- `docs/GITHUB_UPLOAD_NOTES.md`
-
-本目录已经尽量整理为适合 GitHub 备份的版本，但实际上传时仍建议再次检查：
-
-- 是否误带本地账号密码
-- 是否误带大体积数据或模型文件
-- 是否需要使用 Git LFS 管理权重文件
