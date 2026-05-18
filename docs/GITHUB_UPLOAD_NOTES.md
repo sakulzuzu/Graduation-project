@@ -1,6 +1,6 @@
 # GitHub 上传说明
 
-本备份目录已按适合上传 GitHub 的方式进行整理，默认不包含以下内容：
+本备份目录默认不包含以下内容：
 
 - 虚拟环境目录：`.venv/`、`.venv-1/`
 - 前端依赖目录：`frontend/node_modules/`
@@ -10,4 +10,3 @@
 - 本地敏感配置：`backend/.env`、`frontend/.env`
 - 训练权重文件：`backend/models/*.pth`
 
-如果后续需要把模型权重也纳入仓库，建议使用 Git LFS，而不是直接提交到普通 Git 仓库。
