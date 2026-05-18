@@ -11,7 +11,7 @@ from docx.shared import Cm, Inches, Pt
 
 ROOT = Path(__file__).resolve().parents[1]
 ART_DIR = ROOT / "backend" / "models" / "thyroid_resnet50_tn5000_formal_20260507_024833_artifacts"
-OUT_PATH = Path(r"C:\Users\86136\Downloads\公开数据集训练结果补充说明-正文版.docx")
+OUT_PATH = Path(r"C:\Users\86136\Downloads\公开数据集训练结果补充说明.docx")
 
 
 def zh(text_ascii_escaped: str) -> str:
