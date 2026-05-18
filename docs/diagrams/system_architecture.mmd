@@ -1,0 +1,23 @@
+﻿flowchart LR
+    U[浏览器用户\n医生/管理员] --> V[React 前端\nVite]
+    V -->|HTTP + Bearer Token| F[Flask API 网关]
+
+    subgraph Backend[Flask 后端服务]
+        F --> R1[认证与权限模块\nJWT / RBAC]
+        F --> R2[影像管理模块\n上传与访问控制]
+        F --> R3[模型推理模块\nResNet50 + Grad-CAM]
+        F --> R4[报告与审核模块]
+        F --> R5[历史查询模块]
+        F --> R6[审计日志模块]
+    end
+
+    R1 <--> M[(MySQL)]
+    R2 <--> M
+    R4 <--> M
+    R5 <--> M
+    R6 <--> M
+
+    R2 --> S1[(storage/original)]
+    R3 --> S2[(storage/processed)]
+    R3 --> S3[(storage/heatmap)]
+    R3 --> S4[(models/thyroid_resnet50.pth)]

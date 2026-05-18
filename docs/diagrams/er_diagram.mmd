@@ -1,0 +1,56 @@
+﻿erDiagram
+    USERS ||--o{ IMAGES : uploads
+    IMAGES ||--o{ PREDICTIONS : generates
+    PREDICTIONS ||--o{ REPORTS : referenced_by
+    USERS ||--o{ REPORTS : creates
+    USERS ||--o{ REPORTS : reviews
+    USERS ||--o{ AUDIT_LOGS : writes
+
+    USERS {
+        int id PK
+        string email UNIQUE
+        string password_hash
+        string role
+        datetime created_at
+    }
+
+    IMAGES {
+        int id PK
+        int user_id FK
+        string filename
+        string original_path
+        string processed_path
+        datetime uploaded_at
+    }
+
+    PREDICTIONS {
+        int id PK
+        int image_id FK
+        string model_name
+        float prob_benign
+        float prob_malignant
+        string predicted_label
+        string heatmap_path
+        datetime created_at
+    }
+
+    REPORTS {
+        int id PK
+        int prediction_id FK
+        text content
+        string status
+        int created_by FK
+        int reviewed_by FK
+        datetime created_at
+        datetime reviewed_at
+    }
+
+    AUDIT_LOGS {
+        int id PK
+        int user_id FK
+        string action
+        string entity_type
+        int entity_id
+        string detail
+        datetime created_at
+    }

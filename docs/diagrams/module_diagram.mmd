@@ -1,0 +1,44 @@
+﻿flowchart TB
+    subgraph FE[前端 React]
+        A1[AuthPanel\n登录/注册]
+        A2[UploadPanel\n影像上传]
+        A3[ResultPanel\n概率与热力图展示]
+        A4[HistoryPanel\n历史筛选]
+        A5[ReportPanel\n报告创建]
+    end
+
+    subgraph BE[后端 Flask]
+        B1[Auth API\n/register /login /users/me]
+        B2[Image API\n/upload /original /heatmap]
+        B3[Predict API\n/predict/{image_id}]
+        B4[History API\n/history]
+        B5[Report API\n/reports /review]
+        B6[Auth Service\nJWT+RBAC]
+        B7[Storage Service\n文件保存与校验]
+        B8[Model Service\nResNet50+GradCAM]
+    end
+
+    subgraph DB[MySQL]
+        C1[(users)]
+        C2[(images)]
+        C3[(predictions)]
+        C4[(reports)]
+        C5[(audit_logs)]
+    end
+
+    subgraph FS[文件存储]
+        D1[(original)]
+        D2[(processed)]
+        D3[(heatmap)]
+        D4[(model_weights)]
+    end
+
+    FE --> BE
+    B1 --> B6
+    B2 --> B7
+    B3 --> B8
+    B3 --> B7
+
+    BE --> DB
+    B7 --> FS
+    B8 --> FS

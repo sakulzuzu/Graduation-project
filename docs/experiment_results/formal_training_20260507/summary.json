@@ -1,0 +1,89 @@
+{
+  "data_dir": "D:\\AAAAAAA\\bishe\\datasets\\thyroid_tn5000",
+  "output": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833.pth",
+  "device": "",
+  "epochs": 150,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "num_workers": 0,
+  "class_names": [
+    "benign",
+    "malignant"
+  ],
+  "train_samples": 3500,
+  "val_samples": 500,
+  "test_samples": 1000,
+  "best_epoch": 32,
+  "best_val_metrics": {
+    "accuracy": 0.938,
+    "macro_precision": 0.9221491228070176,
+    "macro_recall": 0.9106666666666667,
+    "macro_f1": 0.9162048925530477,
+    "weighted_f1": 0.9375726449520205,
+    "class_metrics": {
+      "benign": {
+        "precision": 0.8916666666666667,
+        "recall": 0.856,
+        "f1": 0.873469387755102,
+        "support": 125
+      },
+      "malignant": {
+        "precision": 0.9526315789473684,
+        "recall": 0.9653333333333334,
+        "f1": 0.9589403973509935,
+        "support": 375
+      }
+    },
+    "confusion_matrix": [
+      [
+        107,
+        18
+      ],
+      [
+        13,
+        362
+      ]
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.892,
+    "macro_precision": 0.869036732816753,
+    "macro_recall": 0.8509451329593825,
+    "macro_f1": 0.859315648789333,
+    "weighted_f1": 0.8906438028543291,
+    "class_metrics": {
+      "benign": {
+        "precision": 0.8232931726907631,
+        "recall": 0.7620817843866171,
+        "f1": 0.7915057915057914,
+        "support": 269
+      },
+      "malignant": {
+        "precision": 0.914780292942743,
+        "recall": 0.9398084815321477,
+        "f1": 0.9271255060728745,
+        "support": 731
+      }
+    },
+    "confusion_matrix": [
+      [
+        205,
+        64
+      ],
+      [
+        44,
+        687
+      ]
+    ]
+  },
+  "artifacts": {
+    "metrics_csv": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\metrics.csv",
+    "curves_png": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\training_curves.png",
+    "confusion_matrix_last": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\confusion_matrix_last.png",
+    "confusion_matrix_best": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\confusion_matrix_best.png",
+    "confusion_matrix_test": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\confusion_matrix_test.png",
+    "report_best_json": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\best_val_report.json",
+    "report_test_json": "D:\\AAAAAAA\\bishe\\backend\\models\\thyroid_resnet50_tn5000_formal_20260507_024833_artifacts\\test_report.json"
+  }
+}

@@ -1,0 +1,29 @@
+﻿flowchart LR
+    doctor[医生]
+    admin[管理员]
+
+    subgraph sys[甲状腺结节超声影像辅助分析系统]
+        uc1((注册/登录))
+        uc2((上传超声影像))
+        uc3((良恶性预测))
+        uc4((查看概率与热力图))
+        uc5((历史记录查询))
+        uc6((创建诊断报告))
+        uc7((审核报告))
+        uc8((查看审计记录))
+    end
+
+    doctor --> uc1
+    doctor --> uc2
+    doctor --> uc3
+    doctor --> uc4
+    doctor --> uc5
+    doctor --> uc6
+
+    admin --> uc1
+    admin --> uc2
+    admin --> uc3
+    admin --> uc4
+    admin --> uc5
+    admin --> uc7
+    admin --> uc8

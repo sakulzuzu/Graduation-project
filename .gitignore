@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+.venv-1/
+
+# Local env files
+backend/.env
+frontend/.env
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Runtime storage
+backend/storage/original/*
+backend/storage/processed/*
+backend/storage/heatmap/*
+!backend/storage/original/.gitkeep
+!backend/storage/processed/.gitkeep
+!backend/storage/heatmap/.gitkeep
+
+# Large model files
+backend/models/*.pth
+
+# Datasets
+datasets/raw/
+datasets/thyroid_tn5000/
+datasets/thyroid_synthetic/
+
+# Temporary and local preview directories
+tmp/
+generated/
+defense_ppt_preview/
+ppt_preview_focused/
+ppt_preview_summary4/
+template_summary4_preview/
+template_tech1_preview/
+extracted_thesis_media/
+tmp_thesis_v12_media/
+
+# Office temp files
+~$*.docx
+~$*.pptx
